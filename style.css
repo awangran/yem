@@ -1,0 +1,150 @@
+
+:root{
+    --color-default:#114B5F;
+    --color-primary:#88D499;
+    --color-secondary:#1A936F;
+    --color-light:#C6DABF;
+    --color-highlight:#F3E9D2;
+}
+
+:root{
+    --font-default:;
+    --font-primary:;
+}
+
+:root {
+    scroll-behavior: smooth;
+  }
+
+body {
+    font-family: var(--font-default);
+    color: var(--color-default);
+    background-color: var(--color-highlight);
+  }
+
+
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+  
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+nav li{
+    list-style: none;
+    padding: 5px;
+    margin: 10px;
+}
+
+nav li a:hover{
+    transition: .5s;
+    color: #114B5F;
+    text-decoration: underline;
+    -webkit-text-decoration-style: wavy;
+    text-decoration-style: wavy;    
+}
+
+nav ul{
+    display: flex;
+    padding: 0;
+    gap: 50px;
+}
+
+@media only screen and (max-width: 870px) {
+    nav ul{
+        flex-direction: column;
+        gap: 0;
+        text-align: center;
+        margin: 10px;
+        gap: 20px;
+
+    }
+
+    nav{
+        justify-content: center;
+        background-color: #1A936F;
+        min-width: 20%;
+        padding: 15px;
+        border-radius: 20px;
+        box-shadow: 10px 10px #114B5F;
+        margin:10px;
+
+    }
+
+    .container-fluid{
+        justify-content: right;
+        display: flex;
+    }
+}
+
+
+
+.btn--action{
+    display: block;
+    width: 120px;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    background-color: #88D499;
+    color: white;
+    transition: all .5s ease 0s; 
+    box-shadow: 0 10px #1A936F;
+  }
+  
+  .btn--action:hover{
+  box-shadow: inset 0 0 0 .25rem #1A936F;
+  transition:.5s;
+  } 
+
+  .btn--action span{
+    display: inline-block;
+    position: relative;
+    transition: all .5s ease;
+  }
+  
+  .btn--action span:before{
+    content: '->'; 
+    color: white;
+    font-size: 1rem;
+    display: inline-block;
+    position: absolute;
+    left: 1.5rem;
+    opacity: 0;
+    transition: all .1s ease 0s;
+  }
+  
+  .btn--action:hover span{
+    padding-left: 1.5rem; 
+  }
+  
+  .btn--action:hover span:before{
+    left: 0;
+    opacity: 1;
+  }
+  
+  .btn--action:active {
+    box-shadow: 0 5px #1A936F;
+    transform: translateY(5px);
+  }
+
+  @media only screen and (max-width: 870px) {
+      .btn--action{
+          box-shadow: none;
+          width: auto;
+
+      }
+  }
