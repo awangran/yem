@@ -23,6 +23,18 @@ function light() {
     var lightIcon = document.getElementById("lightmode");
     var darkIcon = document.getElementById("darkmode");
 
+
     lightIcon.style.setProperty('visibility', 'hidden')
     darkIcon.style.setProperty('visibility', 'visible')
+};
+
+function toggleMenu(){
+    var menu = document.getElementById("navMenu");
+
+    if (menu.style.display === "none"){
+        menu.style.display = "block";
+    } else {
+        menu.style.display = "none";
+    }
+
 };

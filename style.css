@@ -41,6 +41,10 @@ h3
   color: var(--color-secondary);
 }
 
+.titleColor2{
+  color:#F3E9D2;
+}
+
 h4,
 h5,
 h6{
@@ -55,13 +59,18 @@ p{
   font-family: var(--font-p);
 }
 
+.par{
+  width: 80%;
+}
+
 section {
-  padding: 60px 0;
+  padding: 0px 0;
   overflow: hidden;
 }
 
 .container{
   padding: 60px;
+  z-index: 2;
 }
 
 nav {
@@ -70,6 +79,8 @@ nav {
     justify-content: center;
     text-align: center;
     flex-wrap: wrap;
+    z-index: 9;
+    position: relative;
 }
 
 nav li{
@@ -102,15 +113,45 @@ nav ul{
 
     }
 
+    nav ul li a{
+      color: #F3E9D2;
+    }
+
     nav{
         justify-content: center;
-        background-color: var(--color-secondary);
+        background-color: #88D499;
         min-width: 20%;
         padding: 15px;
         border-radius: 20px;
-        box-shadow: 10px 10px var(--color-default);
+        box-shadow: 10px 10px #114B5F;
         margin:10px;
+        z-index: 9;
+    }
 
+    #navMenu{
+      display: none;
+      position: absolute;
+      top: 70px;
+      z-index: 9;
+    }
+
+    #menu{
+      font-size: 30px;
+      background-color: var(--color-primary);
+      font-weight: 300px;
+      color: var(--color-default);
+      z-index: 9;
+      height: 30px;
+      padding: 10px;
+      border-radius: 10px; 
+      margin: 10px;
+      box-shadow: 0 10px #114B5F ;
+      visibility: visible;
+    }
+  
+    #menu:hover{
+      background-color: var(--color-secondary);
+      transition: .3s;
     }
 
     .container-fluid{
@@ -119,6 +160,13 @@ nav ul{
     }
 }
 
+
+
+@media only screen and (min-width: 870px) {
+ #menu{
+  visibility: hidden;
+ }
+}
 
 
 .btn--action{
@@ -172,6 +220,29 @@ nav ul{
       .btn--action{
           box-shadow: none;
           width: auto;
+          background-color: #114B5F;
+
+      }
+
+      .semi-circle{
+        opacity: 0.6;
+        transition: .3s;
+      }
+
+      .par{
+        width: 100%;
+      }
+   
+
+      .globe{
+        width: 150px;
+        display: flex;
+        position: absolute;
+        z-index: 5;
+        left: 50px;
+        top:50px;
+        margin: -20px;
+
 
       }
   }
@@ -183,7 +254,7 @@ nav ul{
   .semi-circle{
     background: linear-gradient(to right, var(--color-primary), var(--color-secondary)), url(https://grainy-gradients.vercel.app/noise.svg);
     width: 50%;
-    height: 70%;
+    height: 600px;
     border-radius: 110% 0 0 0;
     z-index: 0;
     right: 0;
@@ -195,10 +266,12 @@ nav ul{
   #darkmode{
     font-size: 30px;
     color: var(--color-secondary);
-    position: relative;
+    position: absolute;
     margin: 10px;
     vertical-align: center;
-    top: 5px;
+    top: 30px;
+    right: 50px;
+    z-index: 9;
   }
 
   #darkmode:hover{
@@ -209,14 +282,60 @@ nav ul{
   #lightmode{
     font-size: 30px;
     color: #F3E9D2;
-    position: relative;
+    position: absolute;
     margin: 10px;
     vertical-align: center;
-    top: 5px;
+    top: 30px;
+    right: 50px;
     visibility: hidden;
+    z-index: 9;
   }
 
   #lightmode:hover{
     color:var(--color-light);
     transition: .3s;
   }
+
+  @media only screen and (max-width: 870px) {
+    #lightmode{
+      right: 100px;
+    }
+
+    #darkmode{
+      right: 100px;
+    }
+  }
+
+  @media only screen and (max-width: 1160px) and (min-width: 870px) {
+    nav ul{
+      gap: 5px;
+    }
+
+    .btn--action{
+      width: 70px;
+      height:10px;
+    }
+
+    .globe{
+      width: 400px;
+      display: flex;
+      position: relative;
+      right: 60px;
+      z-index: 5;
+      top:50px;
+    }
+   
+  }
+
+
+  @media only screen and (min-width: 1160px){
+    .globe{
+      width: 650px;
+      display: flex;
+      position: relative;
+      right: 100px;
+      z-index: 5;
+    }
+  }
+  
+

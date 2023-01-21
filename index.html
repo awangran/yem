@@ -20,7 +20,7 @@
 <body>
     <header>
         <div class="container-fluid">
-            <nav>
+            <nav id="navMenu">
                 <ul>
                     <li><a>Inicio</a></li>
                     <li><a>Nosotros</a></li>
@@ -28,21 +28,23 @@
                     <li><a>Organizaciones</a></li>
                     <li><a>Recursos</a></li>
                     <a href="#" class="btn btn--action"><span>Únete</span></a>
-                    <i class="lni lni-night" id="darkmode" onclick="dark()"></i>
-                    <i class="lni lni-sun" id="lightmode" onclick="light()"></i>
                 </ul>
             </nav>
-
+            <i class="lni lni-night" id="darkmode" onclick="dark()"></i>
+            <i class="lni lni-sun" id="lightmode" onclick="light()"></i>
+            <i class="lni lni-menu" id="menu" onclick="toggleMenu()"></i>
         </div>
     </header>
 
     <section class="header">
         <div class="container">
-            <h1 class="big">Youth <br>Environmental <br>Movement</h1>
+            <h1 id="title1" class="big">Youth <br>Environmental <br>Movement</h1>
             <h4 class="head">Smaller header</h4>
             <p class="par">a long parag that helps understand the titlea long parag that helps understand the titlea long parag that helps understand the titlea long parag that helps understand the title</p>
         </div>
         <div class="semi-circle"></div>
+        <div class="logo"><image class="globe" src="assets/earth.gif"></div>
+
 
     </section>
 
