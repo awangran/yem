@@ -8,16 +8,18 @@
 }
 
 :root{
-    --font-default:;
-    --font-primary:;
+    --font-b:'Mulish', sans-serif;
+    --font-h:'Fira Sans', sans-serif;
+    --font-p:'Prompt', sans-serif;
 }
 
 :root {
     scroll-behavior: smooth;
   }
 
+  
 body {
-    font-family: var(--font-default);
+    font-family: var(--font-p);
     color: var(--color-default);
     background-color: var(--color-highlight);
   }
@@ -30,11 +32,34 @@ body {
   
 h1,
 h2,
-h3,
+h3
+{
+  font-family: var(--font-b);
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+
 h4,
 h5,
-h6 {
-  font-family: var(--font-primary);
+h6{
+  font-family: var(--font-h);
+  font-size: 40px;
+  color: var(--color-primary)
+}
+
+p{
+  font-size: 20px;
+  color: var(--color-default);
+}
+
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.container{
+  padding: 60px;
 }
 
 nav {
@@ -148,3 +173,20 @@ nav ul{
 
       }
   }
+
+  .header{
+    display: flex;
+    flex-direction: row;
+  }
+  .semi-circle{
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary)), url(https://grainy-gradients.vercel.app/noise.svg);
+    width: 50%;
+    height: 70%;
+    border-radius: 110% 0 0 0;
+    z-index: 0;
+    right: 0;
+    position: absolute;
+    top:15%;
+
+  }
+
