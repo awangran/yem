@@ -17,6 +17,7 @@
     scroll-behavior: smooth;
   }
 
+
   
 body {
     font-family: var(--font-p);
@@ -51,6 +52,7 @@ h6{
 p{
   font-size: 20px;
   color: var(--color-default);
+  font-family: var(--font-p);
 }
 
 section {
@@ -78,7 +80,7 @@ nav li{
 
 nav li a:hover{
     transition: .5s;
-    color: #114B5F;
+    color: var(--color-default);
     text-decoration: underline;
     -webkit-text-decoration-style: wavy;
     text-decoration-style: wavy;    
@@ -102,11 +104,11 @@ nav ul{
 
     nav{
         justify-content: center;
-        background-color: #1A936F;
+        background-color: var(--color-secondary);
         min-width: 20%;
         padding: 15px;
         border-radius: 20px;
-        box-shadow: 10px 10px #114B5F;
+        box-shadow: 10px 10px var(--color-default);
         margin:10px;
 
     }
@@ -190,3 +192,31 @@ nav ul{
 
   }
 
+  #darkmode{
+    font-size: 30px;
+    color: var(--color-secondary);
+    position: relative;
+    margin: 10px;
+    vertical-align: center;
+    top: 5px;
+  }
+
+  #darkmode:hover{
+    color:var(--color-primary);
+    transition: .3s;
+  }
+
+  #lightmode{
+    font-size: 30px;
+    color: #F3E9D2;
+    position: relative;
+    margin: 10px;
+    vertical-align: center;
+    top: 5px;
+    visibility: hidden;
+  }
+
+  #lightmode:hover{
+    color:var(--color-light);
+    transition: .3s;
+  }
