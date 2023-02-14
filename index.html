@@ -3,8 +3,9 @@
     
 <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,7 +52,7 @@
     <section>
         <div class="row-wrapper">
         <div class="images">
-            <img src=""></div>
+            <img src="assets/images/044221e6-22b2-45f5-a6d6-26ec275d78a2 (1).JPG"></div>
         <div class="container-two">
             <h4>¿Quiénes Somos?</h3>
             <p>YEM es un movimiento hecho por jóvenes que buscan crear una red de organizaciones, empresas, colegios y personas en Colombia e internacional que trabajan por un medio ambiente más sano y un futuro sostenible. En esta red se comparten y plantean proyectos y actividades a diferentes escalas, como limpiezas de playas, proyectos educativos, foros, encuentros y concursos.</p>
@@ -83,71 +84,25 @@
         </div>
 
     </section>
-    <!-- partial:index.partial.html -->
+    <section id="gallery">
+        <div class="gal-container">
+            <div class="img-container">
+                <img src="assets/images/4b14001c-ae2a-4732-a6b7-b4b8fccfdfde (1).JPG">
+            </div>
+            <div class="img-container">
+                <img src="assets/images/6e6969db-faa0-47e4-bf45-2f6d6027b2e9 (1).JPG">
+            </div>
+            <div class="img-container">
+                <img src="assets/images/89d623ef-4a9d-459b-b930-eb2b136f5d8b (1).JPG">
+            </div>
+            <!-- 
+            <div class="img-container">
+                <img src="assets/images/ec8ae1f2-62bd-4a02-a64f-03efca32caa2 (1).JPG">
+            </div>-->
+            <p  id="visit"><a class="underline-p">Visita nuestra galería de actividades</a></p>
 
-
-<div id="wrapper">
-        
-   	  <div id="slider-wrap">
-      	  <ul id="slider">
-          	 <li data-color="#1abc9c">
-                <div>
-                    <h3>Slide #1</h3>
-                    <span>Sub-title #1</span>
-                </div>                
-                <i class="fa fa-image"></i>
-             </li>
-             
-             <li data-color="#3498db">
-                <div>
-                    <h3>Slide #2</h3>
-                    <span>Sub-title #2</span>
-                </div>
-                <i class="fa fa-gears"></i>
-             </li>
-             
-             <li data-color="#9b59b6">
-                <div>
-                    <h3>Slide #3</h3>
-                    <span>Sub-title #3</span>
-                </div>
-                <i class="fa fa-sliders"></i>
-             </li>
-             
-             <li data-color="#34495e">
-                <div>
-                    <h3>Slide #4</h3>
-                    <span>Sub-title #4</span>
-                </div>
-                <i class="fa fa-code"></i>
-             </li>
-             
-             <li data-color="#e74c3c">
-                <div>
-                    <h3>Slide #5</h3>
-                    <span>Sub-title #5</span>
-                </div>
-                <i class="fa fa-microphone-slash"></i>
-             </li>
-             
-             
-          </ul>
-          
-           <!--controls-->
-          <div class="btns" id="next"><i class="fa fa-arrow-right"></i></div>
-          <div class="btns" id="previous"><i class="fa fa-arrow-left"></i></div>
-          <div id="counter"></div>
-          
-          <div id="pagination-wrap">
-            <ul>
-            </ul>
-          </div>
-          <!--controls-->  
-                 
-      </div>
-  
-   </div>
-<!-- partial -->
+        </div>
+    </section>
 
     <footer>
 
@@ -155,6 +110,7 @@
 </body>
 </html>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>
 
 function toggle(){
